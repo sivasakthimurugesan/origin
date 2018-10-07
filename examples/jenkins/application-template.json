@@ -4,7 +4,7 @@
   "metadata": {
     "name": "nodejs-helloworld-sample",
     "annotations": {
-      "description": "This example shows how to create a simple nodejs application in openshift origin v3",
+      "description": "This example shows how to create a simple nodejs application in openshift v3",
       "iconClass": "icon-nodejs",
       "tags": "instant-app,nodejs"
     }
@@ -77,7 +77,7 @@
               ],
               "from": {
                 "kind": "ImageStreamTag",
-                "name": "origin-nodejs-sample:prod"
+                "name": "nodejs-hello-world:prod"
               }
             }
           },
@@ -152,21 +152,7 @@
       "kind": "ImageStream",
       "apiVersion": "v1",
       "metadata": {
-        "name": "origin-nodejs-sample"
-      }
-    },
-    {
-      "kind": "ImageStream",
-      "apiVersion": "v1",
-      "metadata": {
-        "name": "origin-nodejs-sample2"
-      }
-    },
-    {
-      "kind": "ImageStream",
-      "apiVersion": "v1",
-      "metadata": {
-        "name": "origin-nodejs-sample3"
+        "name": "nodejs-hello-world"
       }
     },
     {
@@ -221,7 +207,7 @@
         "output": {
           "to": {
             "kind": "ImageStreamTag",
-            "name": "origin-nodejs-sample:latest"
+            "name": "nodejs-hello-world:latest"
           }
         },
         "resources": {}
@@ -252,7 +238,7 @@
               ],
               "from": {
                 "kind": "ImageStreamTag",
-                "name": "origin-nodejs-sample:latest"
+                "name": "nodejs-hello-world:latest"
               }
             }
           },
